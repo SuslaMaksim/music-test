@@ -1,0 +1,34 @@
+
+@import '~reset-css';
+
+body{
+  background-color: #f4f7fd;
+}
+
+html,body, #root, .wrapper{
+  height: 100%;
+  color: #202020;
+
+}
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+.app{
+  padding: 1px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow:  0px 0px 25px rgba(0,0,0,0.04204);
+}
+
+.body__notFound{
+  margin: 50px auto 50px;
+  text-align: center;
+  font-size: 40px;
+
+
+
+}
+
