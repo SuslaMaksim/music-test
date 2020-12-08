@@ -11,7 +11,7 @@ let App = ()=> {
         <Switch>
             <Route exact path='/' component = {()=> <MainPageContainer/>}/>
             <Route exact path='/search' component = {()=> <SearchContainer/>}/>
-            <Route exact path='/music/:id' component = {()=> <MusicListContainer/>}/>
+            <Route exact path='/music/:name' component = {()=> <MusicListContainer/>}/>
             <Route component={()=> <div className='body__notFound'>404 The page not found</div>} />
         </Switch>
     </div>

@@ -7,13 +7,34 @@
   padding: 30px 20px 30px 20px ;
   width: 100%;
   background-color: white;
-  &__form{
-    min-width: 500px;
-    margin: 30px 0px 50px 0px;
-  }
   &__result{
     width: 100%;
     min-height: 200px;
   }
 
+}
+.track{
+
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  background-color: #f4f7fd;
+  word-break: break-word;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: all .4s linear;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  &:hover{
+    box-shadow:  0px 0px 25px rgba(0,0,0,0.04204);
+  }
+
+  &_title{
+    font-weight: bolder;
+    margin-right: 10px;
+
+  }
 }

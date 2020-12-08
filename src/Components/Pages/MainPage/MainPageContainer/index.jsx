@@ -1,25 +1,36 @@
 import React,{useEffect} from 'react';
 import {connect} from "react-redux";
 import {MainPage} from "../../index";
-import {withRouter} from 'react-router-dom';
-import {compose} from 'redux';
+import {getMusicDataList} from '../../../../Reducers/MainReduser'
 import loading from '../../../../Assets/loading.gif'
 
 
-let MainPageContainer = ()=>{
+let MainPageContainer = ({getMusicDataList, musicList})=>{
+
+
+    useEffect(()=>{
+        getMusicDataList()
+    },[getMusicDataList])
+
     return(
-        <MainPage/>
+        <>
+        {musicList
+            ?
+            <MainPage musicList={musicList}/>
+            :<div className='loading'>
+                <img src={loading } alt="loading"/>
+            </div>
+        }
+            </>
+
     )
 }
 
 let mapStateToProps =(state)=>{
     return{
-
+        musicList: state.data.musicList
     }
 }
 
 
-export default compose(
-        connect(mapStateToProps),
-        withRouter,
-        )(MainPageContainer);
+export default connect(mapStateToProps,{getMusicDataList})(MainPageContainer);
